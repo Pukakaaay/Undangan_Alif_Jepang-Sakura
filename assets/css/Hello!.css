@@ -1,0 +1,629 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-family: "Kiwi Maru", serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+  font-size: 18px;
+  overflow-x: hidden;
+  background-image: url("../img/download\ \(11\).jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+table, th, td {
+  border:1px solid black;
+}
+/* Kunci scroll*/
+body.lock-scroll {
+  overflow: hidden;
+}
+
+/* Animasi slide-up buat ngilangin elemen #section-0 */
+.slide-up {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+/*elemen #quotes kagak muncul di awal */
+#quotes {
+  display: none;
+}
+
+#quotes.show {
+  display: block;
+}
+
+#cover-text{
+    text-align:center;
+    margin-top:150px;
+}
+
+/* Font|Text Settings*/
+p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+h1 {
+  font-family: "Allura", cursive;
+  font-size: 60px;
+}
+
+/*Responsible Text*/
+@media (max-width: 575px) {
+  .text-bg h1 {
+      font-size: 34px;
+      line-height: 53px;
+      padding-bottom: 40px;
+  }
+}
+.YO {
+  color:#F9F5F6;
+}
+ /* Pengaturan layout */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Bulad (lingkaran) */
+.circle {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background-color: #800000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; 
+}
+
+/* Teks di depan lingkaran */
+.text {
+  font-size: 5vh;
+  position: relative;
+  z-index: 2; 
+
+}
+
+/* Tombol RSVP */
+.button {
+  background-color: #800000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; 
+  z-index: 3; 
+}
+
+.button:hover {
+  background-color: #570202;
+  color: bisque;
+}
+
+  /*Program*/
+   html {
+    scroll-behavior: smooth;
+}
+
+/*Box*/
+.albumbox{
+  height: 300vh;
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Kiwi Maru", serif;
+}
+.boxfull{
+    width: 100%;
+    height: 150vh;
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    background-size: cover;
+    overflow: hidden;
+    position:relative;
+    font-family: "Kiwi Maru", serif;
+}
+@media only screen and (max-width : 768px) {
+  .boxfull{
+    width: 100%;
+    height: 100vh;
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    background-size: cover;
+    overflow: hidden;
+    position:relative;
+    font-family: "Kiwi Maru", serif;
+}
+.albumbox{
+  height: 180vh;
+  display: block;
+  text-align: center;
+  font-size: 50px;
+}
+.boxfull{
+  width: 100%;
+  height: 100vh;
+}
+.boxfull-1{
+  height: 150vh;
+}
+#section-3 {
+  font-size: 30px;
+}
+}
+@media only screen and (max-width: 500px) {
+  .albumbox{height: 500vh;}
+  .boxfull-1{
+    height: 200vh;
+  }
+}
+.boxfu{
+  height: 420vh;
+}
+.bg-primary{
+    background-color: #F9F5F6;
+}
+.bg-secondary{
+    background-color: #F8E8EE;
+}
+.bg-third{
+    background-color: #FDCEDF;
+}
+.bg-dark{
+    background-color: #F2BED1;
+}
+.bg-light{
+    background-color: #f1f1f1;
+}
+.c-txt-l{
+    color: #F2E8C6;
+    size: 10px;
+}
+.c-txt-d{
+    color:#800000;
+}
+/*Navigaton Bar*/
+.slide-up {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.sakura-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sakura-overlay img.depan {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.profile-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 100px;
+}
+
+
+.Samping {
+  margin-top: 20px;
+  transition: transform .2s;
+}
+.Samping:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+
+
+#Ins {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+#quotes {
+  display: none;
+}
+nav {
+  background-color: #800000;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: -70px;
+  transition: 0.3s;
+  z-index: 3;
+}
+
+nav ul li:last-of-type {
+  padding-bottom: 8px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav div img {
+  width: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: "Kiwi Maru", serif;
+  color:#F2E8C6;
+  font-weight: 600;
+  padding: 8px 0;
+  transition: all;
+  transition-duration: 300ms;
+  border-bottom: 2px solid #f2e8c600;
+}
+nav ul li a:hover {
+  color: #101010;
+  border-bottom: 2px solid #101010;
+
+}
+
+/*nav Menu list*/
+.menu-icon {
+  font-size: 28px;
+  display: none;
+}
+
+@media only screen and (max-width : 768px) {
+
+  nav {
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    top: -70px;
+    transition: 0.3s;
+    z-index: 3;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul.hidden {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+    align-items: center;
+  }
+}
+  
+/* General Styles */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Gallery */
+.album .responsive-container-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.album .img-cont {
+  flex: 1 1 calc(33.33% - 20px);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.album .img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px; 
+}
+
+.album iframe, .album video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.album .img.img-big {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .album .img-cont {
+    flex: 1 1 calc(48% - 20px);
+  }
+}
+
+@media (max-width: 500px) {
+  .album .img-cont {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .album .img {
+    margin-bottom: 20px;
+  }
+}
+
+/* Iframe Styles for Maps */
+iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  iframe {
+    height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  iframe {
+    height: 150px;
+  }
+}
+
+/* Responsiveness for Form */
+@media (max-width: 768px) {
+  .formbold-form-wrapper {
+    flex-direction: column;
+  }
+}
+
+
+/*gambarnya*/
+#cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  display:block;
+  position:relative;
+  background-size: cover;
+  width:100%;
+  height:100vh;
+  overflow: hidden;
+
+}
+.img-l-top{
+  position:absolute;
+  width: 50vh;
+  left: -100px;
+  top:-300px
+}
+.img-r-top{
+  position:absolute;
+  right: -100px;
+  top: -300px;
+  transform: scaleX(-1);
+  width:50vh
+}   
+.img-l-bottom{
+position:absolute;
+left: -150px;
+bottom:-5px;
+transform: scaleY(-1);
+width:50vh
+}
+.img-r-bottom{
+  position:absolute;
+right: -150px;
+bottom:-5px;
+transform: scale(-1);
+width:50vh
+}
+/*RSVP*/
+#section-5 {
+  padding: 20px;
+  margin-top: 40px; 
+}
+
+.formbold-main-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7; 
+  border-radius: 10px; 
+}
+
+.formbold-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formbold-form-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formbold-btn {
+  padding: 12px;
+  background-color: #800000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.formbold-btn:hover {
+  background-color: #570202;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  #section-5 {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  #section-5 {
+    margin-top: 60px;
+    padding: 15px;
+  }
+
+  .formbold-form-wrapper {
+    gap: 20px;
+  }
+
+  .formbold-btn {
+    padding: 10px;
+  }
+  #section-5 {
+    margin-bottom: 40px;
+    height: 170vh;
+  }
+  
+}
+
+
+/* Cerita section */
+#story {
+  text-align: center;
+}
+
+.story-content {
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+  color: #333;
+  padding: 20px;
+  text-align: left;
+}
+
+#story h2, #thanks h2, .putih {
+  color: #fff;
+  font-family: "Kiwi Maru", serif;
+}
+
+/* Form section */
+#gift-form, #section-8 {
+  margin-top: 20px;
+}
+
+input[type="text"], input[type="file"], textarea {
+  width: 20%;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 20%;
+}
+
+button:hover {
+  background-color: #570202;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .story-content {
+    padding: 15px;
+  }
+
+  input[type="text"], input[type="file"], textarea {
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+
+  .footer, #story, #thanks {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .story-content {
+    padding: 10px;
+  }
+
+  button {
+    padding: 7px 14px;
+  }
+
+  #gift-form input, #gift-form textarea, #section-8 textarea {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #gift-form button, #section-8 button {
+    width: 50%;
+    
+  }
+}
+#size {
+  text-align: center;
+  width: 100%; 
+}
+
+#Qr {
+  max-width: 30%;
+  height: auto;
+  margin: 0 auto; 
+  display: block; 
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
